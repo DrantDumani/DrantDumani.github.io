@@ -1,3 +1,7 @@
+body, html {
+        font-family: 'Titillium Web', sans-serif;
+}
+
 nav {
 	background-color: ea52f2;
 }
