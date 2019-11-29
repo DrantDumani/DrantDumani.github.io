@@ -1,5 +1,10 @@
 nav {
-	background-color: purple;
+	background-color: ea52f2;
+}
+
+li {
+      text-decoration: none;
+      list-style-type: none;
 }
 
 #slides {
