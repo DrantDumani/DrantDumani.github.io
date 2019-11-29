@@ -2,11 +2,11 @@ body, html {
         font-family: 'Titillium Web', sans-serif;
 }
 
-li {
+nav {
 	background-color: #ea52f2;
 }
 
-a {
+li, a {
       text-decoration: none;
       list-style-type: none;
 }
