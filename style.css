@@ -1,10 +1,12 @@
 body, html {
 	font-family: 'Titillium Web', sans-serif;
+        background-color: #dedede;
+	color: #940c99;
 	margin: 0;
 	padding: 0;
 }
 
-header {
+#header {
 	position: fixed;
 	right: 0;
 	top: 0;
@@ -27,12 +29,7 @@ nav {
 
 .nav-link {
 	text-decoration: none;
-	color: #dedede;
-}
-
-main {
-	background-color: #dedede;
-	color: #940c99;
+        list-style-type: none;
 }
 	
 
