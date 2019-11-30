@@ -6,7 +6,6 @@ let projects = [
 	"Link.jpg"
 ]
 
-//let current_Proj = projects
 let curr = 0
 var slides = document.getElementById("slides")
 slides.setAttribute("src", projects[curr])
