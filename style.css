@@ -51,7 +51,7 @@ nav {
   color: #dedede;
 }
 .nav-link:hover, .icon:hover {
-  color: #2a2a2a;
+  color: #7c7c7c;
   font-weight: bold;
 }
 #page-content {
@@ -97,11 +97,12 @@ nav {
 }
 
 #projects {
-  background-color: #02687c;
-  color: #fed58f;
+  background-color: #015e70;
+  color: #fed7b1;
 }
-
 .project-grid {
+  width: 80%;
+  margin: 0 auto;
   display: grid;
   grid-gap: 20px;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
@@ -114,11 +115,10 @@ nav {
 
 .card {
   margin: 20px;
-  /*padding: 130px;*/
   border-radius: 4px;
   box-shadow: 0 0 8px #000;
-  background-color: #fed58f;
-  color: #02687c;
+  background-color: #fed7b1;
+  color: #015e70;
   overflow: hidden;
 }
 
@@ -173,9 +173,4 @@ nav {
     flex-direction: row;
     justify-content: space-around;
   }
-  
-/*  .card {
-    width: 600px;
-  }*/
-  
 }
