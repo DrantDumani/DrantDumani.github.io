@@ -51,7 +51,7 @@ nav {
   color: #dedede;
 }
 .nav-link:hover, .icon:hover {
-  color: #7c7c7c;
+  color: #2a2a2a;
   font-weight: bold;
 }
 #page-content {
@@ -97,12 +97,11 @@ nav {
 }
 
 #projects {
-  background-color: #015e70;
-  color: #fed7b1;
+  background-color: #02687c;
+  color: #fed58f;
 }
+
 .project-grid {
-  width: 80%;
-  margin: 0 auto;
   display: grid;
   grid-gap: 20px;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
@@ -117,8 +116,8 @@ nav {
   margin: 20px;
   border-radius: 4px;
   box-shadow: 0 0 8px #000;
-  background-color: #fed7b1;
-  color: #015e70;
+  background-color: #fed58f;
+  color: #02687c;
   overflow: hidden;
 }
 
