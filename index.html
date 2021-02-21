@@ -1,71 +1,89 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <title>Darnell Portfolio</title>
+  <title>Darnell's Portfolio</title>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <script src="https://kit.fontawesome.com/2ee78743cc.js" crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width, intial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="nW_style.css">
 </head>
-
-<body>
-  <header id="header">
-    <label id="menu-label" for="menu">
-      <span class="hamburger"></span>
-      <span class="hamburger"></span>
-      <span class="hamburger"></span>
-    </label>
-    <input id="menu" type="checkbox">
-    <nav>
-      <ul class="navigation">
-        <li><a class="nav-link" href="#about">About</a></li>
-        <li><a class="nav-link" href="#projects">Projects</a></li>
-        <li><a class="nav-link" href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-  	<div id="page-content">
-	  <main id="main">
-	    <section id="about">
-	       <img class="profile-img" src="https://raw.githubusercontent.com/DrantDumani/Free-code-camp_projects/master/karaoke.jpg" alt="Handsome web/game dev">
-        <p class="section-title">Hi, I'm Darnell!</p>
-	    <p class="section-text">Web / Game Developer and Writer. HTML, CSS, JavaScript, Bash, Bootstrap, Lua, and Love2d. Check out my work below!</p>
-	    </section>
-	    <section id="projects">
-        <p class="section-title">Projects</p>
-	      <div class="card">
-	        <a id="project-link" href="" target="_blank">
-            <img id="slides" src="" alt="Portfolio">
-          </a>
-          <h3 id="project-title"></h3>
-          <p id="project-text"></p>
-	      </div>
-        <div class="buttons">
-          <button id="change">Next project!</button>
+<body id="body">
+  <nav id="navbar">
+    <div id="collapse-nav">
+      <a href="#body" class="hamburger-link">
+        <div class="hamburger-group hamgrp-two">
+            <span class="hamburger-icon"></span>
+            <span class="hamburger-icon"></span>
+            <span class="hamburger-icon"></span>
         </div>
-	    </section>
-	  </main>
-	  <footer id="contact">
-	    <p class="section-text">Feel free to contact me anytime.</p>
-      <div class="icon-box">
-        <a class="icon" href="mailto:divine_alphatron@yahoo.com" target="_blank">
-          <i class="fas fa-envelope-open fa-3x"></i>
-        </a>
-        <a class="icon" href="https://twitter.com/elemeandor" target="_blank">
-          <i class="fab fa-twitter fa-3x"></i>
-        </a>
-        <a class="icon" href="https://www.facebook.com/darnell.lubin" target="_blank">
-          <i class="fab fa-facebook-f fa-3x"></i>
-        </a>
-        <a class="icon" href="https://github.com/DrantDumani" target="_blank">
-          <i class="fab fa-github fa-3x"></i>
+      </a>
+      <ul id="nav-menu">
+        <li><a href="#welcome-section" class="nav-link">About</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+    <a href="#collapse-nav" class="hamburger-link">
+      <div class="hamburger-group">
+          <span class="hamburger-icon"></span>
+          <span class="hamburger-icon"></span>
+          <span class="hamburger-icon"></span>
+      </div>
+    </a>
+  </nav>
+  <section id="welcome-section">
+    <div id="img-div">
+      <img id="dev-pic" src="https://raw.githubusercontent.com/DrantDumani/Daily-Web-Projects-2020/master/Proj5_Portfolio_Free_Code_Camp/assets/karaoke.jpg" alt="DJ singing">
+    </div>
+    <p id="about-me">Hello! I'm Darnell. Web developer, game programmer, writer.</p>
+  </section>
+  <section id="projects">
+    <p class="section-header">My Projects</p>
+    <div class="project-grid">
+      <div class="project-tile">
+        <a href="https://codepen.io/Elemeandor/full/NWNWdeB" target="_blank">
+          <img src="https://raw.githubusercontent.com/DrantDumani/Daily-Web-Projects-2020/master/Proj5_Portfolio_Free_Code_Camp/assets/Screenshot_2020-09-16%20Zero%20the%20Maverick%20Hunter.png"
+          alt="Tribute-page" class="project-pic">
+          <p class="wrapper-text">Tribute Page (HTML, CSS)</p>
         </a>
       </div>
-	  </footer>
-	</div>
-    <script type="text/javascript" src="script.js"></script>
+      <div class="project-tile">
+        <a href="https://codepen.io/Elemeandor/full/eYZmGXe" target="_blank">
+          <img src="https://raw.githubusercontent.com/DrantDumani/Daily-Web-Projects-2020/master/Proj5_Portfolio_Free_Code_Camp/assets/Screenshot_2020-09-16%20Music%20Survey%20Form.png"
+          alt="Survey-page" class="project-pic">
+          <p class="wrapper-text">Survey Form (HTML, CSS)</p>
+        </a>
+      </div>
+      <div class="project-tile">
+        <a href="https://codepen.io/Elemeandor/full/jOqreax" target="_blank">
+          <img src="https://raw.githubusercontent.com/DrantDumani/Daily-Web-Projects-2020/master/Proj5_Portfolio_Free_Code_Camp/assets/Screenshot_2020-09-16%20Sheikah%20Tech.png"
+          alt="Product-Landing-page" class="project-pic">
+          <p class="wrapper-text">Product Landing Page (HTML, CSS)</p>
+        </a>
+      </div>
+      <div class="project-tile">
+        <a href="https://codepen.io/Elemeandor/full/gOrRabN" target="_blank">
+          <img src="https://raw.githubusercontent.com/DrantDumani/Daily-Web-Projects-2020/master/Proj5_Portfolio_Free_Code_Camp/assets/Screenshot_2020-09-16%20Lua%20Documentation%20Page.png"
+          alt="Technical_Documentation-page" class="project-pic">
+          <p class="wrapper-text">Technical Documentation Page (HTML, CSS)</p>
+        </a>
+      </div>
+      <div class="project-tile">
+        <a href="https://codepen.io/Elemeandor/full/eYdrKzY" target="_blank">
+          <img src="https://raw.githubusercontent.com/DrantDumani/Daily-Web-Projects-2020/master/Proj5_Portfolio_Free_Code_Camp/assets/Screenshot_2021-02-21%20CodePen%20-%20History%20of%20Hyrule%203.png"
+          alt="History-of-Hyrule" class="project-pic">
+          <p class="wrapper-text">History of Hyrule (HTML, CSS, Vanilla JS)</p>
+        </a>
+      </div>
+    </div>
+  </section>
+  <footer id="contact">
+    <p class="section-header">Contact</p>
+    <ul class="profile-list">
+      <li><a class="social-link" id="profile-link" target="_blank" href="https://github.com/DrantDumani">Github</a></li>
+      <li><a class="social-link" target="_blank" href="divine_alphatron@yahoo.com">Email</a></li>
+      <li><a class="social-link" target="_blank" href="https://twitter.com/elemeandor">Twitter</a></li>
+    </ul>
+  </footer>
 </body>
-
 </html>

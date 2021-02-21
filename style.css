@@ -1,195 +1,229 @@
-body,
-html {
-  font-family: "Titillium Web", sans-serif;
-  margin: 0;
-  padding: 0;
-  scroll-behavior: smooth;
+body {
+  margin: 0 auto;
+  font-family: 'Playfair Display', serif;
+  background-color: #03202e;
+  color: #fff;
 }
-#header {
+
+body > * {
+  box-sizing: border-box;
+}
+
+#navbar {
+  display: flex;
+  flex-direction: column;
   position: fixed;
-  right: 0;
   top: 0;
-  left: 0;
   width: 100%;
-  background-color: #940c99;
-  color: #dedede;
-  box-shadow: 0 8px 6px -6px black
-}
-header > [type="checkbox"] {
-  display: none;
+  height: 65px;
+  background-color: #03202e;
 }
 
-[type="checkbox"]:checked ~ nav {
-  animation-name: drop-down;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
-}
-/*[type="checkbox"]:not(:checked) ~ nav {
-  animation-name: drop-up;
-  animation-duration: 0.5s;
-  animation-fill-mode: forward;
-}*/
-.hamburger {
-  display: block;
-  background-color: #dedede;
-  border-radius: 6px;
-  width: 30px;
-  height: 5px;
-  margin: 6px 0 0 9px;
-}
-nav {
-  margin-left: -20px;
-  height: 10px;
-  font-size: 18px;
+#collapse-nav {
+  position: absolute;
+  flex-shrink: 0;
+  order: 2;
+  opacity: 0;
+  width: 100vw;
+  height: 0;
+  background-color: #03202e;
+  transition: all 0.45s ease-in;
+  z-index: 10;
   overflow: hidden;
 }
-.navigation {
-  list-style-type: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  width: 100%;
-}
-.nav-link, .icon {
-  text-decoration: none;
-  list-style-type: none;
-  color: #dedede;
-}
-.nav-link:hover, .icon:hover {
-  color: #2a2a2a;
-  font-weight: bold;
-}
-#page-content {
-  display: flex;
-  flex-direction: column;
-}
-#about {
-  background-color: #dedede;
-  color: #940c99;
-}
-.profile-img {
-  display: block;
-  margin: 0 auto;
-  border-radius: 50%;
-  border-style: solid;
-  border-color: #940c99;
-  width: 200px;
-  height: 200px; 
-}
-#about > .section-title {
-  margin-top: -6px;
-}
-.section-title {
-  font-size: 3.5rem;
-  margin-bottom: 0.7px;
-  font-weight: bold;
-  padding: 0 15px;
+
+#collapse-nav:target {
+  height: 100vh;
+  opacity: 1;
 }
 
-.section-text {
-  padding: 0 25px;
-  font-size: 26px;
-}
-
-.section-title, .section-text {
+#nav-menu {
+  margin-top: 100px;
+  padding: 0;
   text-align: center;
-}
-#main {
-  background-color: #dedede;
-  color:#940c9;
-  padding-top: 70px;
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  list-style-type: none;
 }
 
-#projects {
-  background-color: #02687c;
-  color: #fed58f;
+#nav-menu > * {
+  padding: 15px 0;
 }
 
-.card {
-  margin: 0 auto;
-  width: 300px;
-  border-radius: 4px;
-  box-shadow: 0 0 8px #000;
-  background-color: #fed58f;
-  color: #02687c;
-  overflow: hidden;
+.nav-link {
+  font-size: 5em;
 }
 
-#project-title {
-  margin: -2.5px 10px 10.5px 10px;
+.social-link, .nav-link {
+  text-decoration: none;
+  color: #fff;
+}
+
+.social-link:hover, .nav-link:hover {
   text-decoration: underline;
 }
 
-#project-text {
-  margin: 0 10px;
-  line-height: 1.3rem;
-  padding-bottom: 10px;
-  font-weight: bold;
+.hamburger-group {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  order: 1;
+  z-index: 1;
 }
 
-.buttons {
-  text-align: center;
-  padding: 18px 0;
+.hamgrp-two > .hamburger-icon:nth-child(1) {
+  transform: rotate(45deg) translate(2px, 12px);
 }
 
-#slides {
+.hamgrp-two > .hamburger-icon:nth-child(2) {
+  opacity: 0;
+}
+
+.hamgrp-two > .hamburger-icon:nth-child(3) {
+  transform: rotate(-45deg) translate(2px, -12px);
+}
+
+.hamburger-icon {
+  display: block;
+  margin: 5px;
+  border-radius: 4px;
+  background-color: #fff;
+  width: 35px;
+  height: 5px;
+  transition: 0.3s;
+}
+
+#welcome-section {
+  padding-top: 7em;
+  min-height: 100vh;
+  width: 100%;
+}
+
+#dev-pic {
+  display: block;
+  margin: auto;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  max-width: 65%;
+  height: auto;
+}
+
+#about-me {
+  padding: 0 0.4em;
+  font-size: 2em;
+  line-height: 1.2em;
+}
+
+.section-header {
+  font-size: 2em;
+}
+
+.section-header, .project-grid, .profile-list {
+  padding: 0 30px;
+}
+
+#projects {
+  padding: 40px 0;
+}
+
+.project-grid {
+    display: grid;
+    grid-gap: 20px;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+}
+
+.project-tile {
+  overflow: hidden;
+  background-color: #081013;
+}
+
+.project-tile > a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.project-pic {
+  display: block;
   width: 100%;
   height: auto;
 }
 
-#contact{
-  color: #dedede;
-  background-color: #940c99;
+.project-pic, .wrapper-text {
+  transition: all 0.5s;
 }
 
-.icon-box {
-  display: flex;
-  justify-content: center;
+.wrapper-text {
+  text-align: center;
+  opacity: 0;
 }
 
-.fab, .fas {
-  padding: 0 8px 16px 8px;
+.project-tile a:hover > .project-pic {
+  transform: scale(1.07);
 }
 
-@keyframes drop-down {
-  0% {
-    height: 10px;
-  }
-  
-  100% {
-    height: 105px;
-  }
+.project-tile a {
+  display: block;
 }
 
-/*@keyframes drop-up {
-  0% {
-    height: 105px;
-  }
-  
-  100% {
-    height: 10px;
-  }
-}*/
+.project-tile a:hover > .wrapper-text {
+  opacity: 1;
+}
 
-@media (min-width: 660px) 
-{
-  .hamburger {
+#contact {
+  background-color: #1e1e1e;
+}
+
+#contact > .section-header {
+  padding-top: 40px;
+}
+
+.profile-list {
+  list-style-type: none;
+  margin-bottom: 0;
+  padding-bottom: 16px;
+}
+
+.social-link {
+  line-height: 2;
+  text-decoration: none;
+}
+
+@media (min-width: 1200px) {
+  #navbar {
+    overflow: hidden;
+  }
+
+  #welcome-section {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+
+  #about-me{
+    margin-top: 0;
+    font-size: 4.5em;
+  }
+
+  .hamburger-link {
     display: none;
   }
-  
-  nav {
-    height: 60px;
-    font-size: 22px;
+
+  #collapse-nav {
+    position: static;
+    height: auto;
+    opacity: 1;
+    overflow: visible;
   }
-  
-  .navigation {
+
+  #nav-menu {
+    margin-top: 0;
     flex-direction: row;
     justify-content: space-around;
   }
-  
-  .card {
-    width: 600px;
+
+  .nav-link {
+    font-size: 2.5em;
   }
-  
 }
